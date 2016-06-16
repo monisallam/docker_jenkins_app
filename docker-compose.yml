@@ -2,7 +2,6 @@ version: "2"
 
 services:
   voting-app:
-<<<<<<< HEAD
     build: ./voting-app/.
     volumes:
      - ./voting-app:/app
@@ -40,49 +39,16 @@ services:
     networks:
       - back-tier
 
-=======
-    image: docker/example-voting-app-voting-app
-    ports:
-      - "80"
-    networks:
-      - voteapp
-  result-app:
-    image: docker/example-voting-app-result-app
-    ports:
-      - "80"
-    networks:
-      - voteapp
-  worker:
-    image: docker/example-voting-app-worker
-    networks:
-      - voteapp
-  redis:
-    image: redis
-    ports:
-      - "6379"
-    networks:
-      - voteapp
-    container_name: redis
->>>>>>> c72b8bbda2461f0013e78b6c11a54abea4ccf3b9
   db:
     image: postgres:9.4
     volumes:
       - "db-data:/var/lib/postgresql/data"
     networks:
-<<<<<<< HEAD
       - back-tier
 
-=======
-      - voteapp
-    container_name: db
->>>>>>> c72b8bbda2461f0013e78b6c11a54abea4ccf3b9
 volumes:
   db-data:
 
 networks:
-<<<<<<< HEAD
   front-tier:
   back-tier:
-=======
-  voteapp:
->>>>>>> c72b8bbda2461f0013e78b6c11a54abea4ccf3b9
