@@ -3,6 +3,8 @@ version: "2"
 services:
   voting-app:
     build: ./voting-app/.
+    #volumes:
+     #- ./voting-app:/app
     ports:
       - "5000:80"
     links:
@@ -13,6 +15,8 @@ services:
 
   result-app:
     build: ./result-app/.
+    #volumes:
+      #- ./result-app:/app
     ports:
       - "5001:80"
     links:
@@ -37,9 +41,13 @@ services:
 
   db:
     image: postgres:9.4
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
     networks:
       - back-tier
 
+volumes:
+  db-data:
 
 networks:
   front-tier:
