@@ -39,33 +39,7 @@ This is essentially just used as a source repository to demonstrate how to integ
 
 
 
-BLAHBLASKDJFLASDKJF
-TEST TO SEE IF JENKINS PICKS THIS UP
-
-TEST NUMBER 2
-
-TEST NUMBER 3
-
-TEST NUMBER 4
-
-TEST NUMBER 5
-
-TEST NUMBER 6
-
-TEST NUMBER 7
-
-TEST NUMBER 8
-
-TEST NUMBER 9
-
-TEST NUMBER 10
-
-
-TEST NUMBER 11
-
-TEST NUMBER 12
-
-TEST NUMBER 13
+Test 1
 >>>>>>> c72b8bbda2461f0013e78b6c11a54abea4ccf3b9
 
 
