@@ -3,8 +3,8 @@ version: "2"
 services:
   voting-app:
     build: ./voting-app/.
-   # volumes:
-   #  - ./voting-app:/app
+    volumes:
+     - ./voting-app:/app
     ports:
       - "5002:80"
     links:
