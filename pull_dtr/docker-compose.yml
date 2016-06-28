@@ -4,7 +4,7 @@ services:
   voting-app:
     image: 172.28.128.4/admin/frontend-userinput:latest
     ports:
-      - "5002:80"
+      - "80"
     networks:
       - back-tier
 
@@ -12,7 +12,7 @@ services:
     #build: ./result-app/.
     image: 172.28.128.4/admin/frontend-display:latest
     ports:
-      - "5003:80"
+      - "80"
     networks:
       - back-tier
 
