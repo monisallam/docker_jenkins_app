@@ -9,7 +9,6 @@ services:
       - back-tier
 
   result-app:
-    #build: ./result-app/.
     image: 172.28.128.4/admin/frontend-display:latest
     ports:
       - "80"
@@ -17,8 +16,7 @@ services:
       - back-tier
 
   worker:
-    #build: ./worker
-    image: 172.28.128.4/admin/myworker
+    image: 172.28.128.4/admin/myworker:2.0
     networks:
       - back-tier
 
@@ -29,7 +27,7 @@ services:
       - back-tier
 
   db:
-    image: 172.28.128.4/admin/mydb:9.4
+    image: postgres:9.4
     volumes:
       - "db-data:/var/lib/postgresql/data"
     networks:
