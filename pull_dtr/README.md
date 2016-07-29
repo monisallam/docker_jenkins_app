@@ -9,6 +9,9 @@ More info at https://blog.docker.com/2015/11/docker-toolbox-compose/
 Architecture
 -----
 
+trigger change
+
+
 * A Python webapp which lets you vote between two options
 * A Redis queue which collects new votes
 * A Java worker which consumes votes and stores them in…
