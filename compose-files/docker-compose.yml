@@ -2,21 +2,34 @@ version: "2"
 
 services:
   voting-app:
-    image: 172.28.128.4/admin/frontend-userinput:jenkins
+    build: ./voting-app/.
+    volumes:
+     - ./voting-app:/app
     ports:
-      - "80"
+      - "5002:80"
+    links:
+      - redis
     networks:
+      - front-tier
       - back-tier
 
   result-app:
-    image: 172.28.128.4/admin/frontend-display:jenkins
+    build: ./result-app/.
+    volumes:
+      - ./result-app:/app
     ports:
-      - "80"
+      - "5003:80"
+    links:
+      - db
     networks:
+      - front-tier
       - back-tier
 
   worker:
-    image: 172.28.128.4/admin/myworker:2.0
+    build: ./worker
+    links:
+      - db
+      - redis
     networks:
       - back-tier
 
@@ -37,9 +50,5 @@ volumes:
   db-data:
 
 networks:
+  front-tier:
   back-tier:
-    ipam:
-        driver: default
-        config:
-        - subnet: 10.0.201.0/24
-          gateway: 10.0.201.1
