@@ -2,14 +2,14 @@ version: "2"
 
 services:
   voting-app:
-    image: 172.28.128.4/admin/frontend-userinput:jenkins
+    image: 172.28.128.4/admin/frontend-userinput:jenkins1
     ports:
       - "80"
     networks:
       - back-tier
 
   result-app:
-    image: 172.28.128.4/admin/frontend-display:jenkins
+    image: 172.28.128.4/admin/frontend-display:jenkins1
     ports:
       - "80"
     networks:
