@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Example Voting App
 ==================
 
@@ -38,8 +38,5 @@ Docker Hub images for services in this app are built automatically from master:
 This is essentially just used as a source repository to demonstrate how to integrate Jenkins into a typical CI/CD workflow leveraging Docker Data Center.
 
 
-
-Test 5
->>>>>>> c72b8bbda2461f0013e78b6c11a54abea4ccf3b9
 
 
