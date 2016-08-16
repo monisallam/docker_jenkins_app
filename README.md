@@ -1,5 +1,5 @@
 
-just to kick off build- tmobile
+just to kick off build
 
 
 Example Voting App
